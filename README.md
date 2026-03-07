@@ -12,57 +12,6 @@ This repository provides a **structured, hands-on curriculum** that builds intui
 
 ---
 
-## Repository Structure
-
-```
-physics-informed-learning/
-├── 01_Foundations/
-│   ├── 01_pde_primer_and_numerical_methods.ipynb
-│   ├── 02_automatic_differentiation_for_physics.ipynb
-│   ├── 03_spectral_methods_and_fourier_analysis.ipynb
-│   └── 04_neural_network_function_approximation.ipynb
-├── 02_Physics_informed_neural_networks/
-│   ├── 01_vanilla_pinn_forward_problems.ipynb
-│   ├── 02_boundary_and_initial_conditions.ipynb
-│   ├── 03_loss_landscape_and_training_dynamics.ipynb
-│   └── 04_residual_based_adaptive_sampling.ipynb
-├── 03_Advanced_PINN_architectures/
-│   ├── 01_adaptive_activation_functions.ipynb
-│   ├── 02_multi_scale_pinns.ipynb
-│   ├── 03_domain_decomposition_xpinn_cpinn.ipynb
-│   └── 04_transfer_learning_and_meta_pinns.ipynb
-├── 04_Neural_operators/
-│   ├── 01_deeponet_from_scratch.ipynb
-│   ├── 02_fourier_neural_operator.ipynb
-│   ├── 03_physics_informed_neural_operators.ipynb
-│   └── 04_latent_and_transformer_neural_operators.ipynb
-├── 05_Structure_preserving_networks/
-│   ├── 01_hamiltonian_neural_networks.ipynb
-│   ├── 02_lagrangian_neural_networks.ipynb
-│   ├── 03_neural_ode_and_continuous_dynamics.ipynb
-│   └── 04_symplectic_and_volume_preserving_nets.ipynb
-├── 06_Inverse_problems_and_discovery/
-│   ├── 01_parameter_identification_with_pinns.ipynb
-│   ├── 02_sindy_sparse_equation_discovery.ipynb
-│   ├── 03_symbolic_regression_for_physics.ipynb
-│   └── 04_data_driven_discovery_of_conservation_laws.ipynb
-├── 07_SOTA_scalable_methods/
-│   ├── 01_causal_training_and_temporal_causality.ipynb
-│   ├── 02_separable_pinns_and_efficiency.ipynb
-│   ├── 03_kolmogorov_arnold_networks_for_pdes.ipynb
-│   └── 04_large_scale_scientific_computing.ipynb
-├── 08_Next_generation_paradigms/
-│   ├── 01_pinnsformer_and_attention_pde_solvers.ipynb
-│   ├── 02_diffusion_models_for_scientific_computing.ipynb
-│   ├── 03_in_context_operator_learning.ipynb
-│   └── 04_foundation_models_for_pdes.ipynb
-├── pyproject.toml
-├── LICENSE
-└── README.md
-```
-
----
-
 ## Module Overview
 
 ### Module 1 · Mathematical & Computational Foundations
