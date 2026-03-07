@@ -4,6 +4,28 @@
 
 ---
 
+## Table of Contents
+
+- [Why This Repo?](#why-this-repo)
+- [Module Overview](#module-overview)
+  - [Module 1 · Mathematical & Computational Foundations](#module-1--mathematical--computational-foundations)
+  - [Module 2 · Physics-Informed Neural Networks (PINNs)](#module-2--physics-informed-neural-networks-pinns)
+  - [Module 3 · Advanced PINN Architectures](#module-3--advanced-pinn-architectures)
+  - [Module 4 · Neural Operators](#module-4--neural-operators)
+  - [Module 5 · Structure-Preserving Neural Networks](#module-5--structure-preserving-neural-networks)
+  - [Module 6 · Inverse Problems & Equation Discovery](#module-6--inverse-problems--equation-discovery)
+  - [Module 7 · SOTA & Scalable Methods](#module-7--sota--scalable-methods)
+  - [Module 8 · Next-Generation Paradigms (2024–2026)](#module-8--next-generation-paradigms-20242026)
+- [Suggested Learning Path](#suggested-learning-path)
+- [Prerequisites](#prerequisites)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Notebook Convention](#notebook-convention)
+- [Key References](#key-references)
+- [License](#license)
+
+---
+
 ## Why This Repo?
 
 Physics-informed learning sits at the intersection of scientific computing and deep learning. Traditional numerical solvers are well-understood but expensive; pure data-driven models are fast but ignore known physics. Physics-informed methods combine the best of both worlds by embedding physical laws (PDEs, conservation laws, symmetries) directly into neural network training.
@@ -189,40 +211,34 @@ Each notebook follows a consistent structure:
 
 ## Key References
 
-### Foundational Methods
+### Foundational Methods (2016–2020)
 
-| Year | Paper | Link |
-|------|-------|------|
-| 2016 | Brunton, Proctor, Kutz — *Discovering Governing Equations from Data by Sparse Identification of Nonlinear Dynamical Systems* (PNAS) | [doi:10.1073/pnas.1517384113](https://doi.org/10.1073/pnas.1517384113) |
-| 2018 | Chen, Rubanova, Bettencourt, Duvenaud — *Neural Ordinary Differential Equations* (NeurIPS) | [arxiv:1806.07366](https://arxiv.org/abs/1806.07366) |
-| 2019 | Raissi, Perdikaris, Karniadakis — *Physics-Informed Neural Networks: A Deep Learning Framework for Solving Forward and Inverse Problems Involving Nonlinear PDEs* (JCP) | [doi:10.1016/j.jcp.2018.10.045](https://doi.org/10.1016/j.jcp.2018.10.045) |
-| 2019 | Greydanus, Dzamba, Sotton — *Hamiltonian Neural Networks* (NeurIPS) | [arxiv:1906.01563](https://arxiv.org/abs/1906.01563) |
-| 2020 | Cranmer, Greydanus, Hoyer et al. — *Lagrangian Neural Networks* (ICLR Workshop) | [arxiv:2003.04630](https://arxiv.org/abs/2003.04630) |
-| 2020 | Jagtap, Karniadakis — *Extended Physics-Informed Neural Networks (XPINNs)* (CMAME) | [doi:10.1016/j.cma.2020.113028](https://doi.org/10.1016/j.cma.2020.113028) |
-| 2020 | Tancik et al. — *Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains* (NeurIPS) | [arxiv:2006.10739](https://arxiv.org/abs/2006.10739) |
+- Brunton, Proctor, Kutz — [*Discovering Governing Equations from Data by Sparse Identification of Nonlinear Dynamical Systems*](https://doi.org/10.1073/pnas.1517384113) (PNAS, 2016)
+- Chen, Rubanova, Bettencourt, Duvenaud — [*Neural Ordinary Differential Equations*](https://arxiv.org/abs/1806.07366) (NeurIPS, 2018)
+- Raissi, Perdikaris, Karniadakis — [*Physics-Informed Neural Networks: A Deep Learning Framework for Solving Forward and Inverse Problems Involving Nonlinear PDEs*](https://doi.org/10.1016/j.jcp.2018.10.045) (JCP, 2019)
+- Greydanus, Dzamba, Sotton — [*Hamiltonian Neural Networks*](https://arxiv.org/abs/1906.01563) (NeurIPS, 2019)
+- Cranmer, Greydanus, Hoyer et al. — [*Lagrangian Neural Networks*](https://arxiv.org/abs/2003.04630) (ICLR Workshop, 2020)
+- Jagtap, Karniadakis — [*Extended Physics-Informed Neural Networks (XPINNs)*](https://doi.org/10.1016/j.cma.2020.113028) (CMAME, 2020)
+- Tancik et al. — [*Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains*](https://arxiv.org/abs/2006.10739) (NeurIPS, 2020)
 
-### Neural Operators & Training Dynamics
+### Neural Operators & Training Dynamics (2021–2024)
 
-| Year | Paper | Link |
-|------|-------|------|
-| 2021 | Lu, Jin, Pang, Zhang, Karniadakis — *Learning Nonlinear Operators via DeepONet* (Nature Machine Intelligence) | [doi:10.1038/s42256-021-00302-5](https://doi.org/10.1038/s42256-021-00302-5) |
-| 2021 | Li, Kovachki, Azizzadenesheli et al. — *Fourier Neural Operator for Parametric Partial Differential Equations* (ICLR) | [arxiv:2010.08895](https://arxiv.org/abs/2010.08895) |
-| 2022 | Wang, Yu, Perdikaris — *When and Why PINNs Fail to Train: A Neural Tangent Kernel Perspective* (JCP) | [doi:10.1016/j.jcp.2021.110768](https://doi.org/10.1016/j.jcp.2021.110768) |
-| 2022 | Wang, Perdikaris — *Respecting Causality for Training Physics-Informed Neural Networks* | [arxiv:2203.07404](https://arxiv.org/abs/2203.07404) |
-| 2024 | Li et al. — *Physics-Informed Neural Operator for Learning Partial Differential Equations* (Nature Machine Intelligence) | [doi:10.1038/s42256-024-00794-x](https://doi.org/10.1038/s42256-024-00794-x) |
+- Lu, Jin, Pang, Zhang, Karniadakis — [*Learning Nonlinear Operators via DeepONet*](https://doi.org/10.1038/s42256-021-00302-5) (Nature Machine Intelligence, 2021)
+- Li, Kovachki, Azizzadenesheli et al. — [*Fourier Neural Operator for Parametric Partial Differential Equations*](https://arxiv.org/abs/2010.08895) (ICLR, 2021)
+- Wang, Yu, Perdikaris — [*When and Why PINNs Fail to Train: A Neural Tangent Kernel Perspective*](https://doi.org/10.1016/j.jcp.2021.110768) (JCP, 2022)
+- Wang, Perdikaris — [*Respecting Causality for Training Physics-Informed Neural Networks*](https://arxiv.org/abs/2203.07404) (2022)
+- Li et al. — [*Physics-Informed Neural Operator for Learning Partial Differential Equations*](https://doi.org/10.1038/s42256-024-00794-x) (Nature Machine Intelligence, 2024)
 
-### Cutting-Edge Methods (2024–2026)
+### Cutting-Edge Methods (2023–2026)
 
-| Year | Paper | Link |
-|------|-------|------|
-| 2024 | Liu et al. — *KAN: Kolmogorov-Arnold Networks* | [arxiv:2404.19756](https://arxiv.org/abs/2404.19756) |
-| 2024 | Shukla et al. — *A Comprehensive and FAIR Comparison between MLP and KAN Representations for Differential Equations and Operator Networks* | [arxiv:2406.02917](https://arxiv.org/abs/2406.02917) |
-| 2024 | Wu et al. — *Transolver: A Fast Transformer Solver for PDEs on General Geometries* (ICML) | [arxiv:2402.02366](https://arxiv.org/abs/2402.02366) |
-| 2024 | Cho et al. — *Separable Physics-Informed Neural Networks* (NeurIPS) | [arxiv:2306.15969](https://arxiv.org/abs/2306.15969) |
-| 2024 | Zhao et al. — *PINNsFormer: A Transformer-Based Framework for Physics-Informed Neural Networks* (ICLR) | [arxiv:2307.11833](https://arxiv.org/abs/2307.11833) |
-| 2024 | Herde et al. — *Poseidon: Efficient Foundation Models for PDEs* | [arxiv:2405.19101](https://arxiv.org/abs/2405.19101) |
-| 2023 | Yang et al. — *In-Context Operator Learning with Data Prompts for Differential Equation Problems* (PNAS) | [doi:10.1073/pnas.2310142120](https://doi.org/10.1073/pnas.2310142120) |
-| 2023 | Lim et al. — *Score-based Diffusion Models in Function Space* (NeurIPS) | [arxiv:2302.07400](https://arxiv.org/abs/2302.07400) |
+- Lim et al. — [*Score-based Diffusion Models in Function Space*](https://arxiv.org/abs/2302.07400) (NeurIPS, 2023)
+- Yang et al. — [*In-Context Operator Learning with Data Prompts for Differential Equation Problems*](https://doi.org/10.1073/pnas.2310142120) (PNAS, 2023)
+- Liu et al. — [*KAN: Kolmogorov-Arnold Networks*](https://arxiv.org/abs/2404.19756) (2024)
+- Wu et al. — [*Transolver: A Fast Transformer Solver for PDEs on General Geometries*](https://arxiv.org/abs/2402.02366) (ICML, 2024)
+- Shukla et al. — [*A Comprehensive and FAIR Comparison between MLP and KAN Representations for Differential Equations and Operator Networks*](https://arxiv.org/abs/2406.02917) (2024)
+- Cho et al. — [*Separable Physics-Informed Neural Networks*](https://arxiv.org/abs/2306.15969) (NeurIPS, 2024)
+- Zhao et al. — [*PINNsFormer: A Transformer-Based Framework for Physics-Informed Neural Networks*](https://arxiv.org/abs/2307.11833) (ICLR, 2024)
+- Herde et al. — [*Poseidon: Efficient Foundation Models for PDEs*](https://arxiv.org/abs/2405.19101) (2024)
 
 ## License
 
