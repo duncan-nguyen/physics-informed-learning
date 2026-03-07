@@ -139,6 +139,62 @@ physics-informed-learning/
 
 ---
 
+## Suggested Learning Path
+
+```mermaid
+graph TD
+    %% ── Module nodes ──
+    M1["<b>Module 1</b><br/>Foundations<br/><i>PDEs · AutoDiff · Spectral · Approx</i>"]
+    M2["<b>Module 2</b><br/>PINNs Core<br/><i>Forward problems · BCs · Training</i>"]
+    M3["<b>Module 3</b><br/>Advanced PINNs<br/><i>Activations · Multi-scale · XPINN</i>"]
+    M4["<b>Module 4</b><br/>Neural Operators<br/><i>DeepONet · FNO · PINO · Transolver</i>"]
+    M5["<b>Module 5</b><br/>Structure-Preserving<br/><i>HNN · LNN · Neural ODE · Symplectic</i>"]
+    M6["<b>Module 6</b><br/>Inverse & Discovery<br/><i>Param ID · SINDy · Symbolic Reg</i>"]
+    M7["<b>Module 7</b><br/>SOTA & Scalable<br/><i>Causal · Separable · KAN · Large-Scale</i>"]
+    M8["<b>Module 8</b><br/>Next-Gen Paradigms<br/><i>PINNsFormer · Diffusion · Foundation</i>"]
+
+    %% ── Main sequential path ──
+    M1 --> M2 --> M3
+
+    %% ── Parallel branches after Module 3 ──
+    M3 --> M4
+    M3 --> M5
+    M3 --> M6
+
+    %% ── Convergence to SOTA ──
+    M4 --> M7
+    M5 --> M7
+    M6 --> M7
+
+    %% ── Final frontier ──
+    M7 --> M8
+    M4 -.-> M8
+
+    %% ── Styling ──
+    classDef foundation fill:#4a90d9,stroke:#2c5f8a,color:#fff,rx:12,ry:12
+    classDef core fill:#5ba55b,stroke:#3d7a3d,color:#fff,rx:12,ry:12
+    classDef advanced fill:#e8a838,stroke:#b07d1e,color:#fff,rx:12,ry:12
+    classDef branch fill:#9b6dbf,stroke:#6d4a8a,color:#fff,rx:12,ry:12
+    classDef sota fill:#e05555,stroke:#a83a3a,color:#fff,rx:12,ry:12
+    classDef frontier fill:#2eb8b8,stroke:#1a8a8a,color:#fff,rx:12,ry:12
+
+    class M1 foundation
+    class M2 core
+    class M3 advanced
+    class M4,M5,M6 branch
+    class M7 sota
+    class M8 frontier
+```
+
+> **Reading the graph:**
+> - **Solid arrows** → required prerequisites
+> - **Dashed arrows** → recommended but optional background
+> - Modules 4, 5, 6 can be studied **in parallel** after completing Module 3
+> - All three branches converge into Module 7 (SOTA methods)
+> - Module 8 (next-gen) is the capstone — best studied last
+
+---
+
 ## Prerequisites
 
 - **Mathematics**: Calculus (multivariate), linear algebra, basic ODEs/PDEs
