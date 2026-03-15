@@ -1,0 +1,88 @@
+site_name: "Physics-Informed Learning Lab"
+site_description: "A notebook-first path from PDE baselines to operator learning and frontier scientific ML"
+site_author: "Duncan Nguyen"
+repo_url: "https://github.com/duncan-nguyen/physics-informed-learning"
+repo_name: "duncan-nguyen/physics-informed-learning"
+
+theme:
+  name: material
+  features:
+    - navigation.indexes
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - search.suggest
+    - search.highlight
+  palette:
+    # Scheme is light (default), but the top header is dark/black
+    - scheme: default
+      primary: black
+      accent: indigo
+
+plugins:
+  - search
+  - mkdocs-jupyter:
+      include_requirejs: true
+      custom_mathjax_url: "data:text/javascript,"
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# We can remove extra_css as MathJax injects its own.
+
+nav:
+  - Home: index.md
+  - Lab Guide:
+      - "Repo Map and Protocol": 00_Lab_Guide/01_repo_map_and_experiment_protocol.ipynb
+  - Core Path:
+      - "PDE Primer and Numerical Methods": 01_Core_Path/01_pde_primer_and_numerical_methods.ipynb
+      - "Vanilla PINN Forward Problems": 01_Core_Path/02_vanilla_pinn_forward_problems.ipynb
+      - "Boundary and Initial Conditions": 01_Core_Path/03_boundary_and_initial_conditions.ipynb
+      - "Loss Landscape and Training Dynamics": 01_Core_Path/04_loss_landscape_and_training_dynamics.ipynb
+      - "Residual-based Adaptive Sampling": 01_Core_Path/05_residual_based_adaptive_sampling.ipynb
+      - "Multi-scale PINNs": 01_Core_Path/06_multi_scale_pinns.ipynb
+      - "Parameter Identification with PINNs": 01_Core_Path/07_parameter_identification_with_pinns.ipynb
+      - "DeepONet from Scratch": 01_Core_Path/08_deeponet_from_scratch.ipynb
+      - "Fourier Neural Operator": 01_Core_Path/09_fourier_neural_operator.ipynb
+  - Research Tracks:
+      - Foundations and Extensions:
+          - "Automatic Differentiation": 10_Research_Tracks/01_foundations_extensions/01_automatic_differentiation_for_physics.ipynb
+          - "Spectral Methods and Fourier Analysis": 10_Research_Tracks/01_foundations_extensions/02_spectral_methods_and_fourier_analysis.ipynb
+          - "Neural Network Function Approximation": 10_Research_Tracks/01_foundations_extensions/03_neural_network_function_approximation.ipynb
+      - Advanced PINNs:
+          - "Adaptive Activation Functions": 10_Research_Tracks/02_advanced_pinns/01_adaptive_activation_functions.ipynb
+          - "Domain Decomposition XPINN CPINN": 10_Research_Tracks/02_advanced_pinns/02_domain_decomposition_xpinn_cpinn.ipynb
+          - "Transfer Learning and Meta-PINNs": 10_Research_Tracks/02_advanced_pinns/03_transfer_learning_and_meta_pinns.ipynb
+      - Operator Extensions:
+          - "Physics-Informed Neural Operators": 10_Research_Tracks/03_operator_extensions/01_physics_informed_neural_operators.ipynb
+          - "Latent and Transformer Neural Operators": 10_Research_Tracks/03_operator_extensions/02_latent_and_transformer_neural_operators.ipynb
+      - Structure Preserving Networks:
+          - "Hamiltonian Neural Networks": 10_Research_Tracks/04_structure_preserving_networks/01_hamiltonian_neural_networks.ipynb
+          - "Lagrangian Neural Networks": 10_Research_Tracks/04_structure_preserving_networks/02_lagrangian_neural_networks.ipynb
+          - "Neural ODE and Continuous Dynamics": 10_Research_Tracks/04_structure_preserving_networks/03_neural_ode_and_continuous_dynamics.ipynb
+          - "Symplectic and Volume Preserving Nets": 10_Research_Tracks/04_structure_preserving_networks/04_symplectic_and_volume_preserving_nets.ipynb
+      - Inverse and Discovery:
+          - "SINDy Sparse Equation Discovery": 10_Research_Tracks/05_inverse_and_discovery/01_sindy_sparse_equation_discovery.ipynb
+          - "Symbolic Regression for Physics": 10_Research_Tracks/05_inverse_and_discovery/02_symbolic_regression_for_physics.ipynb
+          - "Data-Driven Discovery of Conservation Laws": 10_Research_Tracks/05_inverse_and_discovery/03_data_driven_discovery_of_conservation_laws.ipynb
+      - Scalable Methods:
+          - "Causal Training and Temporal Causality": 10_Research_Tracks/06_scalable_methods/01_causal_training_and_temporal_causality.ipynb
+          - "Separable PINNs and Efficiency": 10_Research_Tracks/06_scalable_methods/02_separable_pinns_and_efficiency.ipynb
+          - "Kolmogorov-Arnold Networks for PDEs": 10_Research_Tracks/06_scalable_methods/03_kolmogorov_arnold_networks_for_pdes.ipynb
+          - "Large Scale Scientific Computing": 10_Research_Tracks/06_scalable_methods/04_large_scale_scientific_computing.ipynb
+  - Frontier Notes:
+      - "PINNsformer and Attention PDE Solvers": 20_Frontier_Notes/01_pinnsformer_and_attention_pde_solvers.ipynb
+      - "Diffusion Models for Scientific Computing": 20_Frontier_Notes/02_diffusion_models_for_scientific_computing.ipynb
+      - "In-Context Operator Learning": 20_Frontier_Notes/03_in_context_operator_learning.ipynb
+      - "Foundation Models for PDEs": 20_Frontier_Notes/04_foundation_models_for_pdes.ipynb
