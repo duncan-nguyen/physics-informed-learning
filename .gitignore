@@ -71,6 +71,9 @@ instance/
 # Sphinx documentation
 docs/_build/
 _build/
+_book/
+.quarto/
+_freeze/
 .jupyter_cache/
 
 # PyBuilder
