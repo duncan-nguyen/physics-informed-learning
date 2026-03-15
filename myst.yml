@@ -1,0 +1,72 @@
+version: 1
+
+project:
+  id: 3f746b64-e7e9-4d8c-af1c-7a5802b4f216
+  title: Physics-Informed Learning Lab
+  authors:
+    - name: Duncan Nguyen
+  github: duncan-nguyen/physics-informed-learning
+  exclude:
+    - _build
+    - .DS_Store
+    - Thumbs.db
+    - .venv
+    - physics_informed_learning.egg-info
+  toc:
+    - file: index.md
+    - title: Lab Guide
+      children:
+        - file: 00_Lab_Guide/01_repo_map_and_experiment_protocol.ipynb
+    - title: Core Path
+      children:
+        - file: 01_Core_Path/01_pde_primer_and_numerical_methods.ipynb
+        - file: 01_Core_Path/02_vanilla_pinn_forward_problems.ipynb
+        - file: 01_Core_Path/03_boundary_and_initial_conditions.ipynb
+        - file: 01_Core_Path/04_loss_landscape_and_training_dynamics.ipynb
+        - file: 01_Core_Path/05_residual_based_adaptive_sampling.ipynb
+        - file: 01_Core_Path/06_multi_scale_pinns.ipynb
+        - file: 01_Core_Path/07_parameter_identification_with_pinns.ipynb
+        - file: 01_Core_Path/08_deeponet_from_scratch.ipynb
+        - file: 01_Core_Path/09_fourier_neural_operator.ipynb
+    - title: Research Tracks · Foundations Extensions
+      children:
+        - file: 10_Research_Tracks/01_foundations_extensions/01_automatic_differentiation_for_physics.ipynb
+        - file: 10_Research_Tracks/01_foundations_extensions/02_spectral_methods_and_fourier_analysis.ipynb
+        - file: 10_Research_Tracks/01_foundations_extensions/03_neural_network_function_approximation.ipynb
+    - title: Research Tracks · Advanced PINNs
+      children:
+        - file: 10_Research_Tracks/02_advanced_pinns/01_adaptive_activation_functions.ipynb
+        - file: 10_Research_Tracks/02_advanced_pinns/02_domain_decomposition_xpinn_cpinn.ipynb
+        - file: 10_Research_Tracks/02_advanced_pinns/03_transfer_learning_and_meta_pinns.ipynb
+    - title: Research Tracks · Operator Extensions
+      children:
+        - file: 10_Research_Tracks/03_operator_extensions/01_physics_informed_neural_operators.ipynb
+        - file: 10_Research_Tracks/03_operator_extensions/02_latent_and_transformer_neural_operators.ipynb
+    - title: Research Tracks · Structure-Preserving Networks
+      children:
+        - file: 10_Research_Tracks/04_structure_preserving_networks/01_hamiltonian_neural_networks.ipynb
+        - file: 10_Research_Tracks/04_structure_preserving_networks/02_lagrangian_neural_networks.ipynb
+        - file: 10_Research_Tracks/04_structure_preserving_networks/03_neural_ode_and_continuous_dynamics.ipynb
+        - file: 10_Research_Tracks/04_structure_preserving_networks/04_symplectic_and_volume_preserving_nets.ipynb
+    - title: Research Tracks · Inverse and Discovery
+      children:
+        - file: 10_Research_Tracks/05_inverse_and_discovery/01_sindy_sparse_equation_discovery.ipynb
+        - file: 10_Research_Tracks/05_inverse_and_discovery/02_symbolic_regression_for_physics.ipynb
+        - file: 10_Research_Tracks/05_inverse_and_discovery/03_data_driven_discovery_of_conservation_laws.ipynb
+    - title: Research Tracks · Scalable Methods
+      children:
+        - file: 10_Research_Tracks/06_scalable_methods/01_causal_training_and_temporal_causality.ipynb
+        - file: 10_Research_Tracks/06_scalable_methods/02_separable_pinns_and_efficiency.ipynb
+        - file: 10_Research_Tracks/06_scalable_methods/03_kolmogorov_arnold_networks_for_pdes.ipynb
+        - file: 10_Research_Tracks/06_scalable_methods/04_large_scale_scientific_computing.ipynb
+    - title: Frontier Notes
+      children:
+        - file: 20_Frontier_Notes/01_pinnsformer_and_attention_pde_solvers.ipynb
+        - file: 20_Frontier_Notes/02_diffusion_models_for_scientific_computing.ipynb
+        - file: 20_Frontier_Notes/03_in_context_operator_learning.ipynb
+        - file: 20_Frontier_Notes/04_foundation_models_for_pdes.ipynb
+
+site:
+  template: book-theme
+  options:
+    folders: true

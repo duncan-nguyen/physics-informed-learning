@@ -167,6 +167,34 @@ pip install -e .
 jupyter lab
 ```
 
+## Website
+
+The repository can now be rendered as a static website with Jupyter Book and deployed automatically to GitHub Pages.
+
+### Local build
+
+```bash
+pip install -e .
+pip install --upgrade -r requirements-site.txt
+python -m jupyter_book build --html
+```
+
+The generated HTML will be written to `_build/html`.
+
+Jupyter Book 2.x expects a MyST site config and a working `node` + `npm` on your `PATH`.
+If you use `uv`, the equivalent command is `uv run -m jupyter_book build --html`.
+
+### Auto deploy with GitHub Pages
+
+- The workflow lives at `.github/workflows/deploy-pages.yml`.
+- Every push to `main` triggers a fresh build and deploy.
+- The deployment target is GitHub Pages through the official `actions/upload-pages-artifact` and `actions/deploy-pages` flow.
+- The website entry page is `index.md`, and the notebook navigation is controlled by `myst.yml`.
+
+### One-time GitHub setting
+
+In the GitHub repository settings, open **Pages** and set the source to **GitHub Actions**. After that, pushes to `main` will publish the site automatically.
+
 ## Prerequisites
 
 - Multivariable calculus, linear algebra, and basic ODE/PDE background

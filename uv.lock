@@ -992,6 +992,22 @@ wheels = [
 ]
 
 [[package]]
+name = "jupyter-book"
+version = "2.1.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "ipykernel" },
+    { name = "jupyter-core" },
+    { name = "jupyter-server" },
+    { name = "nodeenv" },
+    { name = "platformdirs" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/68/39/8643f6629002e9ea35109219d09dfbe076c338c03fb3fd170c8d5e38bc73/jupyter_book-2.1.2.tar.gz", hash = "sha256:94bb8e63ef191e88cb6e7ab8a1ac66c7dc354ac228de1f558e5beb0381d38f8a", size = 3198230, upload-time = "2026-02-01T22:55:19.724Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7c/25/6fe2dfc3d830ec614c5f83f88fc7472c4ed892b7f7f496367d31de4110c4/jupyter_book-2.1.2-py3-none-any.whl", hash = "sha256:1e92850680782ca777452780f9dee0550b52af338e6fe8c115961142ebf30a0e", size = 2606017, upload-time = "2026-02-01T22:55:16.714Z" },
+]
+
+[[package]]
 name = "jupyter-client"
 version = "8.8.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1572,6 +1588,15 @@ wheels = [
 ]
 
 [[package]]
+name = "nodeenv"
+version = "1.10.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/24/bf/d1bda4f6168e0b2e9e5958945e01910052158313224ada5ce1fb2e1113b8/nodeenv-1.10.0.tar.gz", hash = "sha256:996c191ad80897d076bdfba80a41994c2b47c68e224c542b48feba42ba00f8bb", size = 55611, upload-time = "2025-12-20T14:08:54.006Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/88/b2/d0896bdcdc8d28a7fc5717c305f1a861c26e18c05047949fb371034d98bd/nodeenv-1.10.0-py2.py3-none-any.whl", hash = "sha256:5bb13e3eed2923615535339b3c620e76779af4cb4c6a90deccc9e36b274d3827", size = 23438, upload-time = "2025-12-20T14:08:52.782Z" },
+]
+
+[[package]]
 name = "notebook-shim"
 version = "0.2.4"
 source = { registry = "https://pypi.org/simple" }
@@ -1920,6 +1945,7 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "ipywidgets" },
+    { name = "jupyter-book" },
     { name = "jupyterlab" },
     { name = "matplotlib" },
     { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
@@ -1940,6 +1966,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "ipywidgets", specifier = ">=8.0" },
+    { name = "jupyter-book", specifier = ">=2.1.2" },
     { name = "jupyterlab", specifier = ">=4.0" },
     { name = "matplotlib", specifier = ">=3.7" },
     { name = "numpy", specifier = ">=1.24" },
