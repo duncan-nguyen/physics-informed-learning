@@ -169,15 +169,14 @@ jupyter lab
 
 ## Website
 
-The repository now renders as a Quarto book with a more polished academic UI and can be deployed automatically to GitHub Pages.
+The repository renders as a Quarto website with a polished academic UI and can be deployed automatically to GitHub Pages.
 
 ### Local preview
 
 Install Quarto first, then start a local preview:
 
 ```bash
-pip install -e .
-pip install jupyter
+pip install -e ".[dev]"
 quarto preview
 ```
 
@@ -186,18 +185,18 @@ Quarto can render existing `.ipynb` files without re-executing them by default, 
 ### Static build
 
 ```bash
-quarto render
+quarto render --to html
 ```
 
-The generated site is written to `_book/`.
+The generated site is written to `site-quarto/`.
 
 If you want to regenerate notebook outputs during render, run the notebook separately in JupyterLab first or render an individual notebook with `quarto render path/to/notebook.ipynb --execute`.
 
 ### Auto deploy with GitHub Pages
 
 - The workflow lives at `.github/workflows/deploy-pages.yml`.
-- Every push to `main` runs `quarto render`, uploads `_book/`, and deploys the result through GitHub Pages.
-- The website entry page is `index.qmd`, and the full book navigation is defined in `_quarto.yml`.
+- Every push to `main` runs `quarto render --to html`, uploads `site-quarto/`, and deploys the result through GitHub Pages.
+- The website entry page is `docs/index.md`, and full navigation is defined in `_quarto.yml`.
 - For this repository, the published URL is `https://duncan-nguyen.github.io/physics-informed-learning/`.
 
 ### One-time GitHub setting

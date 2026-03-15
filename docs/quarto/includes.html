@@ -1,0 +1,72 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [["\\(", "\\)"], ["$", "$"]],
+            displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+            processEscapes: true,
+            processEnvironments: true,
+            tags: "ams"
+        },
+        options: {
+            skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+        },
+        svg: {
+            fontCache: "global"
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const sidebarHeader = document.querySelector("#quarto-sidebar .sidebar-header");
+        if (!sidebarHeader || document.querySelector(".sidebar-repo-card")) {
+            return;
+        }
+
+        const owner = "duncan-nguyen";
+        const repo = "physics-informed-learning";
+        const repoUrl = `https://github.com/${owner}/${repo}`;
+
+        const card = document.createElement("a");
+        card.className = "sidebar-repo-card";
+        card.href = repoUrl;
+        card.target = "_blank";
+        card.rel = "noopener noreferrer";
+        card.innerHTML = `
+          <div class="sidebar-repo-head">
+            <span class="sidebar-repo-icon"><i class="bi bi-git"></i></span>
+            <span class="sidebar-repo-name">${owner}/${repo}</span>
+          </div>
+          <div class="sidebar-repo-meta">
+            <span class="sidebar-repo-stat"><i class="bi bi-star"></i> <span data-stars>...</span></span>
+            <span class="sidebar-repo-stat"><i class="bi bi-diagram-2"></i> <span data-forks>...</span></span>
+          </div>
+        `;
+
+        sidebarHeader.insertAdjacentElement("afterend", card);
+
+        fetch(`https://api.github.com/repos/${owner}/${repo}`)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("GitHub API request failed");
+                }
+                return response.json();
+            })
+            .then((data) => {
+                const stars = card.querySelector("[data-stars]");
+                const forks = card.querySelector("[data-forks]");
+                if (stars) stars.textContent = String(data.stargazers_count ?? 0);
+                if (forks) forks.textContent = String(data.forks_count ?? 0);
+            })
+            .catch(() => {
+                const stars = card.querySelector("[data-stars]");
+                const forks = card.querySelector("[data-forks]");
+                if (stars) stars.textContent = "0";
+                if (forks) forks.textContent = "0";
+            });
+    });
+</script>

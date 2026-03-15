@@ -1,4 +1,4 @@
-name: Deploy MkDocs
+name: Deploy Quarto
 
 on:
     push:
@@ -28,13 +28,13 @@ jobs:
               with:
                   python-version: "3.11"
             - name: Install dependencies
-              run: uv pip install --system -e .
+              run: uv pip install --system -e . quarto-cli
             - name: Build site
-              run: uv run mkdocs build
+              run: quarto render --to html
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v4
               with:
-                  path: site
+                  path: site-quarto
 
     deploy:
         environment:

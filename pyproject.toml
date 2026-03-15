@@ -22,9 +22,6 @@ dependencies = [
     "jupyterlab>=4.0",
     "ipywidgets>=8.0",
     "tqdm>=4.65",
-    "mkdocs<2.0.0",
-    "mkdocs-material>=9.5.0",
-    "mkdocs-jupyter>=0.24.0",
     "jupyter>=1.1.1",
 ]
 
@@ -32,4 +29,5 @@ dependencies = [
 dev = [
     "pytest>=7.0",
     "ruff>=0.1.0",
+    "quarto-cli>=1.8.27",
 ]

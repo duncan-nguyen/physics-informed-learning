@@ -1,0 +1,122 @@
+project:
+  type: website
+  output-dir: site-quarto
+  render:
+    - docs/index.md
+    - docs/00_Lab_Guide/*.ipynb
+    - docs/01_Core_Path/*.ipynb
+    - docs/10_Research_Tracks/**/*.ipynb
+    - docs/20_Frontier_Notes/*.ipynb
+
+website:
+  title: Physics-Informed Learning Lab
+  description: A notebook-first path from PDE baselines to operator learning and frontier scientific ML
+  repo-url: https://github.com/duncan-nguyen/physics-informed-learning
+  repo-actions: [edit, issue]
+  sidebar:
+    style: docked
+    search: true
+    collapse-level: 2
+    contents:
+      - href: docs/index.md
+        text: Home
+      - section: Lab Guide
+        contents:
+          - href: docs/00_Lab_Guide/01_repo_map_and_experiment_protocol.ipynb
+            text: Repo Map and Protocol
+      - section: Core Path
+        contents:
+          - href: docs/01_Core_Path/01_pde_primer_and_numerical_methods.ipynb
+            text: PDE Primer and Numerical Methods
+          - href: docs/01_Core_Path/02_vanilla_pinn_forward_problems.ipynb
+            text: Vanilla PINN Forward Problems
+          - href: docs/01_Core_Path/03_boundary_and_initial_conditions.ipynb
+            text: Boundary and Initial Conditions
+          - href: docs/01_Core_Path/04_loss_landscape_and_training_dynamics.ipynb
+            text: Loss Landscape and Training Dynamics
+          - href: docs/01_Core_Path/05_residual_based_adaptive_sampling.ipynb
+            text: Residual-based Adaptive Sampling
+          - href: docs/01_Core_Path/06_multi_scale_pinns.ipynb
+            text: Multi-scale PINNs
+          - href: docs/01_Core_Path/07_parameter_identification_with_pinns.ipynb
+            text: Parameter Identification with PINNs
+          - href: docs/01_Core_Path/08_deeponet_from_scratch.ipynb
+            text: DeepONet from Scratch
+          - href: docs/01_Core_Path/09_fourier_neural_operator.ipynb
+            text: Fourier Neural Operator
+      - section: Research Tracks
+        contents:
+          - section: Foundations and Extensions
+            contents:
+              - href: docs/10_Research_Tracks/01_foundations_extensions/01_automatic_differentiation_for_physics.ipynb
+                text: Automatic Differentiation
+              - href: docs/10_Research_Tracks/01_foundations_extensions/02_spectral_methods_and_fourier_analysis.ipynb
+                text: Spectral Methods and Fourier Analysis
+              - href: docs/10_Research_Tracks/01_foundations_extensions/03_neural_network_function_approximation.ipynb
+                text: Neural Network Function Approximation
+          - section: Advanced PINNs
+            contents:
+              - href: docs/10_Research_Tracks/02_advanced_pinns/01_adaptive_activation_functions.ipynb
+                text: Adaptive Activation Functions
+              - href: docs/10_Research_Tracks/02_advanced_pinns/02_domain_decomposition_xpinn_cpinn.ipynb
+                text: Domain Decomposition XPINN CPINN
+              - href: docs/10_Research_Tracks/02_advanced_pinns/03_transfer_learning_and_meta_pinns.ipynb
+                text: Transfer Learning and Meta-PINNs
+          - section: Operator Extensions
+            contents:
+              - href: docs/10_Research_Tracks/03_operator_extensions/01_physics_informed_neural_operators.ipynb
+                text: Physics-Informed Neural Operators
+              - href: docs/10_Research_Tracks/03_operator_extensions/02_latent_and_transformer_neural_operators.ipynb
+                text: Latent and Transformer Neural Operators
+          - section: Structure Preserving Networks
+            contents:
+              - href: docs/10_Research_Tracks/04_structure_preserving_networks/01_hamiltonian_neural_networks.ipynb
+                text: Hamiltonian Neural Networks
+              - href: docs/10_Research_Tracks/04_structure_preserving_networks/02_lagrangian_neural_networks.ipynb
+                text: Lagrangian Neural Networks
+              - href: docs/10_Research_Tracks/04_structure_preserving_networks/03_neural_ode_and_continuous_dynamics.ipynb
+                text: Neural ODE and Continuous Dynamics
+              - href: docs/10_Research_Tracks/04_structure_preserving_networks/04_symplectic_and_volume_preserving_nets.ipynb
+                text: Symplectic and Volume Preserving Nets
+          - section: Inverse and Discovery
+            contents:
+              - href: docs/10_Research_Tracks/05_inverse_and_discovery/01_sindy_sparse_equation_discovery.ipynb
+                text: SINDy Sparse Equation Discovery
+              - href: docs/10_Research_Tracks/05_inverse_and_discovery/02_symbolic_regression_for_physics.ipynb
+                text: Symbolic Regression for Physics
+              - href: docs/10_Research_Tracks/05_inverse_and_discovery/03_data_driven_discovery_of_conservation_laws.ipynb
+                text: Data-Driven Discovery of Conservation Laws
+          - section: Scalable Methods
+            contents:
+              - href: docs/10_Research_Tracks/06_scalable_methods/01_causal_training_and_temporal_causality.ipynb
+                text: Causal Training and Temporal Causality
+              - href: docs/10_Research_Tracks/06_scalable_methods/02_separable_pinns_and_efficiency.ipynb
+                text: Separable PINNs and Efficiency
+              - href: docs/10_Research_Tracks/06_scalable_methods/03_kolmogorov_arnold_networks_for_pdes.ipynb
+                text: Kolmogorov-Arnold Networks for PDEs
+              - href: docs/10_Research_Tracks/06_scalable_methods/04_large_scale_scientific_computing.ipynb
+                text: Large Scale Scientific Computing
+      - section: Frontier Notes
+        contents:
+          - href: docs/20_Frontier_Notes/01_pinnsformer_and_attention_pde_solvers.ipynb
+            text: PINNsformer and Attention PDE Solvers
+          - href: docs/20_Frontier_Notes/02_diffusion_models_for_scientific_computing.ipynb
+            text: Diffusion Models for Scientific Computing
+          - href: docs/20_Frontier_Notes/03_in_context_operator_learning.ipynb
+            text: In-Context Operator Learning
+          - href: docs/20_Frontier_Notes/04_foundation_models_for_pdes.ipynb
+            text: Foundation Models for PDEs
+
+format:
+  html:
+    theme:
+      - cosmo
+      - docs/quarto/styles.scss
+    toc: true
+    toc-depth: 3
+    smooth-scroll: true
+    include-in-header:
+      - docs/quarto/includes.html
+
+execute:
+  freeze: auto
