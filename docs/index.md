@@ -1,6 +1,6 @@
 ---
 title: "PINNs, Neural Operators, and PDE Learning Path"
-description: "Notebook-first, runnable learning path for physics-informed machine learning: PINNs, DeepONet, Fourier Neural Operators, PDE modeling, and inverse problems."
+description: "Runnable learning path for physics-informed machine learning: PINNs, DeepONet, Fourier Neural Operators, PDE modeling, and inverse problems."
 keywords:
     - physics-informed learning
     - PINNs
@@ -27,7 +27,7 @@ hide:
 # Physics-Informed Learning
 
 ::: {.hero-subtitle}
-A notebook-first path from PDE baselines to operator learning and frontier scientific ML.
+A structured path from PDE baselines to operator learning and frontier scientific ML.
 :::
 
 ::: {.hero-cta}
