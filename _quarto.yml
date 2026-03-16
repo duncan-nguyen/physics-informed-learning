@@ -18,7 +18,6 @@ website:
   site-url: https://duncan-nguyen.github.io/physics-informed-learning/
   open-graph: true
   twitter-card: true
-  sitemap: true
   repo-url: https://github.com/duncan-nguyen/physics-informed-learning
   repo-actions: [edit, issue]
   sidebar:
