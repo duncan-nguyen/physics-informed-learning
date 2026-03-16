@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: site-quarto
   resources:
-    - docs/robots.txt
+    - robots.txt
   render:
     - docs/index.md
     - docs/00_Lab_Guide/*.ipynb

@@ -31,6 +31,49 @@ jobs:
               run: uv pip install --system -e . quarto-cli
             - name: Build site
               run: quarto render --to html
+            - name: Generate sitemap.xml
+              run: |
+                  python - <<'PY'
+                  from pathlib import Path
+                  from datetime import datetime, timezone
+
+                  base_url = "https://duncan-nguyen.github.io/physics-informed-learning"
+                  output_dir = Path("site-quarto")
+                  html_files = sorted(output_dir.rglob("*.html"))
+
+                  timestamp = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+                  urls = []
+                  for file_path in html_files:
+                    relative = file_path.relative_to(output_dir).as_posix()
+                    if relative.endswith("index.html"):
+                      relative = relative[:-10]
+                    loc = f"{base_url}/{relative}" if relative else f"{base_url}/"
+                    urls.append(loc)
+
+                  lines = [
+                    '<?xml version="1.0" encoding="UTF-8"?>',
+                    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+                  ]
+
+                  for loc in urls:
+                    lines.extend([
+                      "  <url>",
+                      f"    <loc>{loc}</loc>",
+                      f"    <lastmod>{timestamp}</lastmod>",
+                      "  </url>",
+                    ])
+
+                  lines.append("</urlset>")
+                  (output_dir / "sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
+                  PY
+            - name: Validate SEO artifacts
+              run: |
+                  test -f site-quarto/robots.txt
+                  test -f site-quarto/sitemap.xml
+                  grep -q "Sitemap: https://duncan-nguyen.github.io/physics-informed-learning/sitemap.xml" site-quarto/robots.txt
+                  grep -q "<urlset" site-quarto/sitemap.xml
+                  grep -q "<url>" site-quarto/sitemap.xml
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v4
               with:
