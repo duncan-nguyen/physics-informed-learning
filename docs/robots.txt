@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://duncan-nguyen.github.io/physics-informed-learning/sitemap.xml

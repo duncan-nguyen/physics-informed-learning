@@ -1,5 +1,12 @@
 ---
-title: Home
+title: Physics-Informed Learning Lab | PINNs, Neural Operators, Scientific ML
+description: Hands-on notebooks for physics-informed machine learning: PINNs, DeepONet, Fourier Neural Operators, PDE modeling, inverse problems, and scientific ML.
+keywords:
+    - physics-informed learning
+    - PINNs
+    - neural operators
+    - PDE machine learning
+    - scientific machine learning
 toc: false
 page-layout: full
 hide:

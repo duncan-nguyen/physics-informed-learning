@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: site-quarto
+  resources:
+    - docs/robots.txt
   render:
     - docs/index.md
     - docs/00_Lab_Guide/*.ipynb
@@ -8,9 +10,15 @@ project:
     - docs/10_Research_Tracks/**/*.ipynb
     - docs/20_Frontier_Notes/*.ipynb
 
+lang: en
+
 website:
-  title: Physics-Informed Learning Lab
-  description: A notebook-first path from PDE baselines to operator learning and frontier scientific ML
+  title: Physics-Informed Learning Lab | PINNs, Neural Operators, Scientific ML
+  description: "Hands-on notebooks for physics-informed machine learning: PINNs, DeepONet, Fourier Neural Operators, PDE modeling, inverse problems, and scientific ML."
+  site-url: https://duncan-nguyen.github.io/physics-informed-learning/
+  open-graph: true
+  twitter-card: true
+  sitemap: true
   repo-url: https://github.com/duncan-nguyen/physics-informed-learning
   repo-actions: [edit, issue]
   sidebar:
