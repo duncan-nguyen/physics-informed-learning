@@ -69,7 +69,7 @@ Deeper autodiff internals remain in `10_Research_Tracks/01_foundations_extension
 |---|---|---|---|---|
 | 1 | `01_pde_primer_and_numerical_methods.ipynb` | Minimal PDE framing, a numerical baseline, and the smallest autodiff bridge needed for PINNs | `core-executable` | `core-executable` |
 | 2 | `02_vanilla_pinn_forward_problems.ipynb` | A single canonical forward PINN problem | `core-executable` | `core-executable` |
-| 3 | `03_boundary_and_initial_conditions.ipynb` | Soft vs hard BC/IC enforcement on the same problem family | `scaffold` | `core-executable` |
+| 3 | `03_boundary_and_initial_conditions.ipynb` | Soft vs hard BC/IC enforcement on the same problem family | `core-executable` | `core-executable` |
 | 4 | `04_loss_landscape_and_training_dynamics.ipynb` | Gradient imbalance, optimizer choice, and loss balancing | `scaffold` | `core-executable` |
 | 5 | `05_residual_based_adaptive_sampling.ipynb` | Uniform vs adaptive collocation strategies on one benchmark | `scaffold` | `core-executable` |
 | 6 | `06_multi_scale_pinns.ipynb` | Spectral bias and one multi-scale PINN thread | `scaffold` | `core-executable` |
