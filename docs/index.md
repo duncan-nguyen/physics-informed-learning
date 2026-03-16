@@ -1,6 +1,6 @@
 ---
-title: "Physics-Informed Learning"
-description: "Hands-on notebooks for physics-informed machine learning: PINNs, DeepONet, Fourier Neural Operators, PDE modeling, inverse problems, and scientific ML."
+title: "PINNs, Neural Operators, and PDE Learning Path"
+description: "Notebook-first, runnable learning path for physics-informed machine learning: PINNs, DeepONet, Fourier Neural Operators, PDE modeling, and inverse problems."
 keywords:
     - physics-informed learning
     - PINNs
@@ -16,6 +16,12 @@ hide:
   - navigation
   - toc
 ---
+
+<style>
+#quarto-document-content > header.quarto-title-block {
+    display: none;
+}
+</style>
 
 ::: {.hero}
 # Physics-Informed Learning

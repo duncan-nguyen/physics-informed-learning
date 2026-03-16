@@ -63,6 +63,10 @@ body {
     font-size: clamp(1.8rem, 2vw, 2.35rem);
 }
 
+body.home-page main#quarto-document-content>header.quarto-title-block {
+    display: none;
+}
+
 .sidebar nav[role="doc-toc"] {
     border-left: 1px solid var(--pil-border);
 }
