@@ -13,7 +13,7 @@ project:
 lang: en
 
 website:
-  title: Physics-Informed Learning Lab | PINNs, Neural Operators, Scientific ML
+  title: Physics-Informed Learning Lab
   description: "Hands-on notebooks for physics-informed machine learning: PINNs, DeepONet, Fourier Neural Operators, PDE modeling, inverse problems, and scientific ML."
   site-url: https://duncan-nguyen.github.io/physics-informed-learning/
   open-graph: true
