@@ -156,7 +156,7 @@ The restructure is meant to enforce a tighter writing and implementation discipl
 ## Getting Started
 
 ```bash
-git clone https://github.com/your-username/physics-informed-learning.git
+git clone https://github.com/duncan-nguyen/physics-informed-learning.git
 cd physics-informed-learning
 pip install -e .
 jupyter lab
