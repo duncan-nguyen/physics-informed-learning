@@ -2,20 +2,6 @@
 
 > A notebook-centric research lab for physics-informed learning. The repo is now organized around a narrow core path, optional research tracks, and frontier note lanes instead of a single oversized linear course.
 
-## What This Pass Changes
-
-This pass only restructures the repository and rewrites the roadmap in `README.md`.
-
-- The notebook tree is now organized into four lanes:
-  - `00_Lab_Guide`
-  - `01_Core_Path`
-  - `10_Research_Tracks`
-  - `20_Frontier_Notes`
-- Existing notebook bodies were intentionally left mostly untouched.
-- The new structure is meant to prevent scope creep before deeper notebook authoring begins.
-
-> Notebook filenames and folders are now the authoritative roadmap. Some notebook titles inside the `.ipynb` files still reflect the older outline and will be aligned in a later content-writing pass.
-
 ## Current Maturity
 
 ### Current Status Labels
@@ -37,18 +23,27 @@ This pass only restructures the repository and rewrites the roadmap in `README.m
 
 ```text
 .
-|-- 00_Lab_Guide/
-|-- 01_Core_Path/
-|-- 10_Research_Tracks/
-|   |-- 01_foundations_extensions/
-|   |-- 02_advanced_pinns/
-|   |-- 03_operator_extensions/
-|   |-- 04_structure_preserving_networks/
-|   |-- 05_inverse_and_discovery/
-|   `-- 06_scalable_methods/
-|-- 20_Frontier_Notes/
+|-- _quarto.yml              # site navigation and render targets
+|-- pyproject.toml           # runtime + dev dependencies
 |-- README.md
-`-- pyproject.toml
+|-- AGENTS.md                # repo guidelines for contributors
+|-- .github/workflows/       # Quarto build + GitHub Pages deployment
+|-- robots.txt
+|-- docs/
+|   |-- index.md             # site landing page (hero + cards)
+|   |-- quarto/              # shared SCSS + HTML includes
+|   |-- javascripts/         # browser-side helpers
+|   |-- 00_Lab_Guide/
+|   |-- 01_Core_Path/        # 9 runnable core notebooks
+|   |-- 10_Research_Tracks/ # 6 subfolders of scaffold notebooks
+|   |   |-- 01_foundations_extensions/
+|   |   |-- 02_advanced_pinns/
+|   |   |-- 03_operator_extensions/
+|   |   |-- 04_structure_preserving_networks/
+|   |   |-- 05_inverse_and_discovery/
+|   |   `-- 06_scalable_methods/
+|   `-- 20_Frontier_Notes/   # 4 note-first scaffolds
+`-- site-quarto/             # generated HTML output (do not hand-edit)
 ```
 
 ## Lane Overview
